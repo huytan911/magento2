@@ -27,9 +27,6 @@ class View extends \Magento\Framework\App\Action\Action {
 
     public function execute()
     {
-        echo '<pre>';
-        print_r($this->customer->getCustomer());
-        echo '</pre>';
         return $this->resultPageFactory->create();
     }
 }

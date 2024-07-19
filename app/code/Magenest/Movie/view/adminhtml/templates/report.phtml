@@ -1,22 +1,23 @@
 <?php
 /**
  * @var \Magenest\Movie\Block\Adminhtml\Report $block
+ * @var \Magento\Framework\Escaper $escaper
  */
 
 ?>
 <div>
     <div class="col-xs-6">
         <strong>Total request today</strong>
-        <p><span><?=$block->getExternalModuleCount()?></span> request has been made today</p>
+        <p><span><?=$escaper->escapeHtml($block->getExternalModuleCount())?></span> request has been made today</p>
     </div>
     <div class="col-xs-6">
         <strong>Detail</strong>
         <div>
-            <p>Contact Request: <span><?=$block->getNumberOfCustomer()?></span></p>
-            <p>Item Request: <span><?=$block->getNumberOfProduct()?></span></p>
-            <p>Order Request: <span><?=$block->getNumberOfOrder()?></span></p>
-            <p>Invoice Request: <span><?=$block->getNumberOfInvoice()?></span></p>
-            <p>CreditNote Request: <span><?=$block->getNumberOfCreditmemo()?></span></p>
+            <p>Contact Request: <span><?=$escaper->escapeHtml($block->getNumberOfCustomer())?></span></p>
+            <p>Item Request: <span><?=$escaper->escapeHtml($block->getNumberOfCustomer())?></span></p>
+            <p>Order Request: <span><?=$escaper->escapeHtml($block->getNumberOfOrder())?></span></p>
+            <p>Invoice Request: <span><?=$escaper->escapeHtml($block->getNumberOfInvoice())?></span></p>
+            <p>CreditNote Request: <span><?=$escaper->escapeHtml($block->getNumberOfCreditmemo())?></span></p>
         </div>
     </div>
 </div>

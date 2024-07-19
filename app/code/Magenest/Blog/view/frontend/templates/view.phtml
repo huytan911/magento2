@@ -1,14 +1,15 @@
 <?php
 /**
  * @var \Magenest\Blog\Block\Blog\View $block
+ * @var \Magento\Framework\Escaper $escaper
  */
 
 $blog = $block->getBlogObject();
 ?>
 
-<p><?=$blog->getTitle()?></p>
-<p><?=$blog->getAuthorId()?></p>
-<p><?=$blog->getDescription()?></p>
-<p><?=$blog->getContent()?></p>
-<p><?=$blog->getUrlRewrite()?></p>
-<p><?=$blog->getStatus()?></p>
+<p><?=$escaper->escapeHtml($blog->getTitle())?></p>
+<p><?=$escaper->escapeHtml($blog->getAuthorId())?></p>
+<p><?=$escaper->escapeHtml($blog->getDescription())?></p>
+<p><?=$escaper->escapeHtml($blog->getContent())?></p>
+<p><?=$escaper->escapeHtml($blog->getUrlRewrite())?></p>
+<p><?=$escaper->escapeHtml($blog->getStatus())?></p>
