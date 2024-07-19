@@ -8,7 +8,7 @@ use Magento\Framework\Registry;
 use Magenest\Blog\Model\BlogFactory;
 
 abstract class Blog extends Action {
-    const ADMIN_RESOURCE = 'Magento_Blog::blog';
+    const ADMIN_RESOURCE = 'Magenest_Blog::blog';
 
     public $blogFactory;
 

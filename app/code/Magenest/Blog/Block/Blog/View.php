@@ -21,8 +21,6 @@ class View extends \Magento\Framework\View\Element\Template {
     public function getBlogObject()
     {
         $id = $this->getRequest()->getParam('id');
-        $blog = $this->_blogFactory->create()->load($id);
-
-        return $blog;
+        return $this->_blogFactory->create()->load($id);
     }
 }

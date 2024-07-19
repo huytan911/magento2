@@ -12,11 +12,6 @@
             <argument name="resourceModel" xsi:type="string">Magenest\Blog\Model\ResourceModel\Blog</argument>
         </arguments>
     </virtualType>
-    <type name="Magenest\Blog\Controller\Index\Example">
-        <plugin name="plugin_name_2" type="Magenest\Blog\Plugin\Plugin1"  disabled="false"/>
-        <plugin name="plugin_name_3" type="Magenest\Blog\Plugin\Plugin2"  disabled="false"/>
-<!--        <plugin name="plugin_name_4" type="Magenest\Blog\Plugin\Plugin3"  disabled="false"/>-->
-    </type>
 
     <preference for="Magenest\Blog\Api\Data\BlogInterface" type="Magenest\Blog\Model\Blog" />
     <preference for="Magenest\Blog\Api\BlogRepositoryInterface" type="Magenest\Blog\Model\Api\BlogRepository" />

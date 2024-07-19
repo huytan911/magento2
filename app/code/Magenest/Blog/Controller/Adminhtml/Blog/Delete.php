@@ -3,25 +3,26 @@
 
 namespace Magenest\Blog\Controller\Adminhtml\Blog;
 
-use Magenest\Blog\Model\ResourceModel\Blog\CollectionFactory;
+//use Magenest\Blog\Model\ResourceModel\Blog\CollectionFactory;
 
 class Delete extends \Magento\Backend\App\Action
 {
     protected $_blogFactory;
-    protected $_blogCollectionFactory;
+
+//    protected $_blogCollectionFactory;
     protected $helperData;
 
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magenest\Blog\Model\BlogFactory  $blogFactory,
         \Magenest\Blog\Helper\Data $helperData,
-        CollectionFactory $blogCollectionFactory,
+//        CollectionFactory $blogCollectionFactory,
     )
     {
         parent::__construct($context);
         $this->_blogFactory = $blogFactory;
         $this->helperData = $helperData;
-        $this->_blogCollectionFactory = $blogCollectionFactory;
+//        $this->_blogCollectionFactory = $blogCollectionFactory;
     }
 
     public function execute()

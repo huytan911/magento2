@@ -6,23 +6,6 @@
             <collapsible>true</collapsible>
             <dataScope>data.product.assign_applicants</dataScope>
         </settings>
-<!--        <field name="from_date" formElement="date">-->
-<!--            <argument name="data" xsi:type="array">-->
-<!--                <item name="config" xsi:type="array">-->
-<!--                    <item name="source" xsi:type="string">page</item>-->
-<!--                </item>-->
-<!--            </argument>-->
-<!--            <settings>-->
-<!--                <dataType>text</dataType>-->
-<!--                <label translate="true">From</label>-->
-<!--            </settings>-->
-<!--        </field>-->
-<!--        <field name="to_date" formElement="date">-->
-<!--            <settings>-->
-<!--                <dataType>text</dataType>-->
-<!--                <label translate="true">To</label>-->
-<!--            </settings>-->
-<!--        </field>-->
         <dynamicRows name="dynamic_rows_demo" component="Magento_Ui/js/dynamic-rows/dynamic-rows-grid" template="ui/dynamic-rows/templates/grid" >
             <settings>
                 <addButtonLabel translate="true">Add Record</addButtonLabel>
@@ -40,7 +23,6 @@
                         <item name="componentType" xsi:type="string">container</item>
                     </item>
                 </argument>
-
                 <field name="title" sortOrder="20" formElement="fileUploader">
                     <argument name="data" xsi:type="array">
                         <item name="config" xsi:type="array">
