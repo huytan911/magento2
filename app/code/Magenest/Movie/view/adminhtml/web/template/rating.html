@@ -1,0 +1,15 @@
+<div class="field required review-field-ratings">
+    <div class="control review-control-vote" >
+        <!--  ko foreach: $col.getLabel($row())   -->
+            <!-- ko if: $data == "selected"-->
+            <span style="color: yellow;">★</span>
+            <!--/ko-->
+            <!-- ko if: $data == "notSelected"-->
+            <span style="color: gray;">★</span>
+            <!--/ko-->
+            <!-- ko if: $data == "half"-->
+            <span style="color: red">★</span>
+            <!--/ko-->
+        <!--    /ko    -->
+    </div>
+</div>

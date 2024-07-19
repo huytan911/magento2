@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <block class="Magenest\Movie\Block\Display" name="movie_index_display" template="Magenest_Movie::movie.phtml" >
+            <arguments>
+                <argument name="hello1" xsi:type="helper" helper="Magenest\Movie\Helper\Data::getConfigValue">
+                    <param name="path">movie/general/text_field</param>
+                    <param name="storeId">2</param>
+                </argument>
+                <argument name="hello2" xsi:type="array" >
+                    <item name="array_key_one" xsi:type="string">First Item</item>
+                    <item name="array_key_two" xsi:type="string">Second Item</item>
+                </argument>
+                <argument name="hello3" xsi:type="url" path="hello/world">
+                    <param name="id">10</param>
+                    <param name="search">hello</param>
+                </argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+</page>

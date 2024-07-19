@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="magenest_helloworld_post" resource="default" engine="innodb"
+           comment="Magenest HelloWorld Post">
+        <column xsi:type="int" name="post_id" padding="11" unsigned="true" nullable="false"
+                comment="Post ID" identity="true"/>
+        <column xsi:type="text" name="name" nullable="false" comment="Name"/>
+        <column xsi:type="text" name="url_key" nullable="false" comment="URL Key"/>
+        <column xsi:type="text" name="post_content" nullable="false" comment="Post Content"/>
+        <column xsi:type="text" name="tags" nullable="false" comment="Post Tags"/>
+        <column xsi:type="text" name="featured_image" nullable="false" comment="Post Image"/>
+        <column xsi:type="smallint" name="status" unsigned="true" nullable="false" comment="Post Status"/>
+
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="CURRENT_TIMESTAMP" on_update="false" comment="Created Datetime"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" comment="Updated Datetime"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="post_id"/>
+        </constraint>
+
+        <index referenceId="MAGENEST_HELLOWORLD_POST_NAME" indexType="btree">
+            <column name="name"/>
+        </index>
+        <index referenceId="MAGENEST_HELLOWORLD_POST_URL_KEY" indexType="btree">
+            <column name="url_key"/>
+        </index>
+        <index referenceId="MAGENEST_HELLOWORLD_POST_POST_CONTENT" indexType="btree">
+            <column name="post_content"/>
+        </index>
+        <index referenceId="MAGENEST_HELLOWORLD_POST_TAGS" indexType="btree">
+            <column name="tags"/>
+        </index>
+        <index referenceId="MAGENEST_HELLOWORLD_POST_FEATURED_IMAGE" indexType="btree">
+            <column name="featured_image"/>
+        </index>
+    </table>
+</schema>

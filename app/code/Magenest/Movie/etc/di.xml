@@ -1,0 +1,66 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="magenest_movie_actor_listing_data_source" xsi:type="string">actorCollection</item>
+                <item name="magenest_movie_director_listing_data_source" xsi:type="string">directorCollection</item>
+                <item name="magenest_movie_movie_listing_data_source" xsi:type="string">Magenest\Movie\Model\ResourceModel\Movie\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="actorCollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magenest_actor</argument>
+            <argument name="resourceModel" xsi:type="string">Magenest\Movie\Model\ResourceModel\Actor</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="directorCollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magenest_director</argument>
+            <argument name="resourceModel" xsi:type="string">Magenest\Movie\Model\ResourceModel\Director</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Magenest\Movie\Model\ResourceModel\Movie\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magenest_movie</argument>
+            <argument name="resourceModel" xsi:type="string">Magenest\Movie\Model\ResourceModel\Movie</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Theme\Model\View\Design">
+        <arguments>
+            <argument name="themes" xsi:type="array">
+                <item name="adminhtml" xsi:type="string">Magenest/Logo</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magenest\Movie\Block\Display">
+        <arguments>
+            <argument name="hello" xsi:type="array">
+                <item name="scalarValue" xsi:type="string">ScalarValue</item>
+                <item name="hello_key" xsi:type="string">Hello</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magenest\Movie\Block\Account\Dashboard">
+        <arguments>
+            <argument name="sessionName" xsi:type="array">
+                <item name="scalarValue" xsi:type="string">ScalarValue</item>
+                <item name="hello_key" xsi:type="string">Hello</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magenest\Blog\Controller\Index\Example">
+        <plugin name="plugin_name_4" type="Magenest\Movie\Plugin\Plugin3"  disabled="false"/>
+    </type>
+
+    <type name="Magento\Checkout\CustomerData\AbstractItem">
+        <plugin name="plugin_name_1" type="Magenest\Movie\Plugin\Plugin" sortOrder="10" disabled="false"/>
+    </type>
+<!--    <preference for="Magento\Checkout\CustomerData\DefaultItem" type="Vendor\Module\Preferences\MiniCartItem" />-->
+
+</config>

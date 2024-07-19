@@ -1,0 +1,23 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="magenest_blog_blog_listing_data_source" xsi:type="string">Magenest\Blog\Model\ResourceModel\Blog\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Magenest\Blog\Model\ResourceModel\Blog\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magenest_blog</argument>
+            <argument name="resourceModel" xsi:type="string">Magenest\Blog\Model\ResourceModel\Blog</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magenest\Blog\Controller\Index\Example">
+        <plugin name="plugin_name_2" type="Magenest\Blog\Plugin\Plugin1"  disabled="false"/>
+        <plugin name="plugin_name_3" type="Magenest\Blog\Plugin\Plugin2"  disabled="false"/>
+<!--        <plugin name="plugin_name_4" type="Magenest\Blog\Plugin\Plugin3"  disabled="false"/>-->
+    </type>
+
+    <preference for="Magenest\Blog\Api\Data\BlogInterface" type="Magenest\Blog\Model\Blog" />
+    <preference for="Magenest\Blog\Api\BlogRepositoryInterface" type="Magenest\Blog\Model\Api\BlogRepository" />
+</config>

@@ -1,0 +1,14 @@
+<?php
+/**
+ * @var \Magenest\Blog\Block\Blog\View $block
+ */
+
+$blog = $block->getBlogObject();
+?>
+
+<p><?=$blog->getTitle()?></p>
+<p><?=$blog->getAuthorId()?></p>
+<p><?=$blog->getDescription()?></p>
+<p><?=$blog->getContent()?></p>
+<p><?=$blog->getUrlRewrite()?></p>
+<p><?=$blog->getStatus()?></p>

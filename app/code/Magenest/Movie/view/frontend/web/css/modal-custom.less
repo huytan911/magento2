@@ -1,0 +1,52 @@
+@margin-right: 4px;
+@margin-top: 4px;
+@margin-bottom: 8px;
+@flex: flex;
+@padding: 10px 20px;
+@width__100: 100%;
+@center: center;
+@yellowgreen: yellowgreen;
+@green: green;
+@white: white;
+@none: none;
+
+.createAccount > p {
+    margin-right: @margin-right;
+}
+.createAccount {
+    display: @flex;
+    justify-content: @center;
+    margin-top: @margin-top;
+}
+.loginInput {
+    margin-bottom: @margin-bottom;
+
+    &:focus {
+        background-color: @yellowgreen;
+        outline: @none;
+        box-shadow: @none !important;
+    }
+}
+.submitLogin {
+    width: @width__100;
+    background-color: @green;
+    color: @white;
+    padding: @padding;
+    margin-bottom: @margin-bottom;
+}
+.loginForm {
+    display: @flex;
+    justify-content: @center;
+    align-items: @center;
+    height: 250px;
+    width: 500px;
+    background-color: @white;
+}
+.loginContainer {
+    display: @flex;
+    justify-content: @center;
+    align-items: @center;
+    width: 100%;
+    height: 400px;
+    background-color: @yellowgreen;
+}

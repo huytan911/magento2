@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+<!--        <block class="Magenest\Blog\Block\Blog\Index" name="blog_index_index" as="child_template" template="Magenest_Blog::sample.phtml" before="-">-->
+<!--            <arguments>-->
+<!--                <argument name="data" xsi:type="array">-->
+<!--                    <item name="key1" xsi:type="string">value1</item>-->
+<!--                    <item name="key2" xsi:type="string">value2</item>-->
+<!--                    <item name="key3" xsi:type="string">value3</item>-->
+<!--                    <item name="key4" xsi:type="string">value4</item>-->
+<!--                </argument>-->
+<!--            </arguments>-->
+<!--        </block>-->
+        <block class="Magenest\Blog\Block\Blog\Index" name="blog_index_sample" template="Magenest_Blog::sample.phtml"  cacheable="false">
+            <arguments>
+                <argument name="data" xsi:type="array">
+                    <item name="key1" xsi:type="string">value1</item>
+                    <item name="key2" xsi:type="string">value2</item>
+                    <item name="key3" xsi:type="string">value3</item>
+                    <item name="key4" xsi:type="string">value4</item>
+                </argument>
+            </arguments>
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Magenest_Blog::index.phtml</argument>
+            </action>
+        </block>
+    </referenceContainer>
+</page>

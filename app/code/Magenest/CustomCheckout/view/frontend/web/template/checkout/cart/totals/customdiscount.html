@@ -1,0 +1,8 @@
+<!-- ko if: isDisplayedCustomdiscount() -->
+<tr class="totals custom_discount excl">
+    <th class="mark" colspan="1" scope="row" data-bind="text: title"></th>
+    <td class="amount" data-bind="style: {color: 'red'}">
+        <span class="price" data-bind="text: getCustomDiscount()"></span>
+    </td>
+</tr>
+<!-- /ko -->

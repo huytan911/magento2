@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magenest" translate="label" sortOrder="101">
+            <label>Magenest</label>
+        </tab>
+        <section id="movie" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Movie</label>
+            <tab>magenest</tab>
+            <resource>Magenest_Movie::movie_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="test" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Test</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="text_field" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Field</label>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>
+                        <![CDATA[Yes/No_Field_<span style="color: red;">abcd</span>]]>
+                    </label>
+                    <depends>
+                        <field id="test">1</field>
+                    </depends>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="admin_list" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Select Field</label>
+                    <source_model>Magenest\Movie\Model\Adminhtml\System\Config\Source\ShowMovie</source_model>
+                    <depends>
+                        <field id="test">1</field>
+                    </depends>
+                </field>
+                <field id="rows_in_table_magenest_movie" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Rows in table “magenest_movie”</label>
+                    <frontend_model>Magenest\Movie\Block\Adminhtml\System\Config\Form\Field\CountRowMovie</frontend_model>
+                    <depends>
+                        <field id="test">1</field>
+                    </depends>
+                </field>
+                <field id="rows_in_table_magenest_actor" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Rows in table “magenest_actor”</label>
+                    <frontend_model>Magenest\Movie\Block\Adminhtml\System\Config\Form\Field\CountRowActor</frontend_model>
+                    <depends>
+                        <field id="test">1</field>
+                    </depends>
+                </field>
+                <field id="button" translate="label" type="button" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Button</label>
+                    <frontend_model>Magenest\Movie\Block\Adminhtml\System\Config\Button</frontend_model>
+                    <depends>
+                        <field id="test">1</field>
+                    </depends>
+                </field>
+                <field id="ranges" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Theme Color</label>
+                    <frontend_model>Magenest\Movie\Block\Adminhtml\Form\Field\Ranges</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

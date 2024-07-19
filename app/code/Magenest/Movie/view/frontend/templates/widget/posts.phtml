@@ -1,0 +1,21 @@
+<?php
+/**
+ * @var Magenest\Movie\Block\Widget\Posts $block
+ */
+?>
+
+
+<?php if($block->checkCustomerGroup()): ?>
+<div class="banner-container">
+    <?php echo $block->getPosts()?>
+    <img class="banner-image" src="<?=$block->getViewFileUrl('Magenest_Movie::images/banner.jpg')?>" alt="Banner Image">
+</div>
+<?php endif; ?>
+<style>
+    .banner-container {
+        text-align: center;
+    }
+    .banner-image {
+        width: 80%;
+    }
+</style>

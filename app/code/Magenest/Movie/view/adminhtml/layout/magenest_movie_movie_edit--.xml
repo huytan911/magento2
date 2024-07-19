@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magenest\Movie\Block\Adminhtml\Movie\Edit" name="magenest_movie_movie_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Magenest\Movie\Block\Adminhtml\Movie\Edit\Tabs" name="magenest_movie_movie_tabs">
+                <block class="Magenest\Movie\Block\Adminhtml\Movie\Edit\Tab\Movie" name="magenest_movie_movie_edit_tab_movie"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">movie</argument>
+                    <argument name="block" xsi:type="string">magenest_movie_movie_edit_tab_movie</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

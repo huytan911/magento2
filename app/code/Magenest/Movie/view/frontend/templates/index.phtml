@@ -1,0 +1,86 @@
+<?php
+/**
+ * @var \Magenest\Movie\Block\Index $block
+ */
+?>
+<div>
+    <button class="alert" data-mage-init='{"customAlert": {"inputSelector": "alert"}}'>
+        Open Modal
+    </button>
+
+    <button data-trigger="openLoginModal">Open Magento Login Modal</button>
+    <div id="login-modal" data-mage-init='{"customModal": {"inputSelector": "login-modal"}}'>
+        <div class="loginContainer">
+            <div class="loginForm">
+                <form action="<?= $block->escapeUrl($block->getLoginPostUrl()) ?>"
+                      method="post"
+                      id="login-form"
+                      data-mage-init='{"validation":{}}'
+                      style="width: 80%"
+                >
+                    <div class="control">
+                        <label class="label" for="email"><span><?= $block->escapeHtml(__('Email: ')) ?></span></label>
+                        <input name="login[username]"
+                               class="loginInput"
+                               id="email"
+                               type="email"
+                               title="<?= $block->escapeHtmlAttr(__('Email')) ?>"
+                               data-mage-init='{"mage/trim-input":{}}'
+                               data-validate="{required:true, 'validate-email':true}">
+                    </div>
+                    <div class="field password required">
+                        <label class="label" for="email"><span><?= $block->escapeHtml(__('Password: ')) ?></span></label>
+                        <input name="login[password]"
+                               class="loginInput"
+                               type="password"
+                               id="password"
+                               title="<?= $block->escapeHtmlAttr(__('Password')) ?>"
+                               data-validate="{required:true}"
+                        >
+                    </div>
+                    <button type="submit" class="submitLogin">Login</button>
+                    <div class="field choice" data-bind="scope: 'showPassword'">
+                        <!-- ko template: getTemplate() --><!-- /ko -->
+                    </div>
+                     <div class="createAccount">
+                        <p>Not registered?</p>
+                        <a href="<?php $block->getUrl('customer/account/create/')?>">Create an account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <button id="modal-magento">Open Custom Login Modal</button>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/block-submit-on-send": {
+                "formId": "login-form"
+            },
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "showPassword": {
+                        "component": "Magento_Customer/js/show-password",
+                        "passwordSelector": "#password"
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    require([
+        'jquery',
+        'Magento_Customer/js/model/authentication-popup'
+    ], function ($, authenticationPopup) {
+        $(document).ready(function () {
+            $('#modal-magento').on('click', function(event) {
+                event.preventDefault();
+                authenticationPopup.showModal();
+                return false;
+            });
+        });
+    });
+
+</script>

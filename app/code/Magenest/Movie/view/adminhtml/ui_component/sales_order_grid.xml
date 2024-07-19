@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<!--    <settings>-->
+<!--        <buttons>-->
+<!--            <button name="export">-->
+<!--                <url path="magenest_movie/index/exportorders"/>-->
+<!--                <class>default</class>-->
+<!--                <label translate="true">Export Orders</label>-->
+<!--                <aclResource>Magenest_Movie::movie</aclResource>-->
+<!--            </button>-->
+<!--        </buttons>-->
+<!--    </settings>-->
+    <argument name="data" xsi:type="array">
+        <item name="buttons" xsi:type="array">
+            <item name="export" xsi:type="array">
+                <item name="name" xsi:type="string">export</item>
+                <item name="label" xsi:type="string" translate="true">Export Orders</item>
+                <item name="class" xsi:type="string">default</item>
+                <item name="url" xsi:type="string">magenest_movie/index/exportorders</item>
+                <item name="aclResource" xsi:type="string">Magenest_Movie::movie</item>
+            </item>
+        </item>
+    </argument>
+    <columns name="sales_order_columns">
+        <column name="even_odd" class="Magenest\Movie\Ui\Component\Listing\Column\OddEven" sortOrder="200">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Odd/Even</item>
+                    <item name="bodyTmpl" xsi:type="string">Magenest_Movie/evenOdd</item>
+                    <item name="filter" xsi:type="string">text</item>
+                </item>
+            </argument>
+        </column>
+    </columns>
+</listing>

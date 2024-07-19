@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">magenest_blog_blog_form.magenest_blog_blog_form_data_source</item>
+            <item name="deps" xsi:type="string">magenest_blog_blog_form.magenest_blog_blog_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Blog Information</item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+            <item name="namespace" xsi:type="string">magenest_blog_blog_form</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="back" class="Magenest\Blog\Block\Adminhtml\Blog\Edit\Button\BackBlog"/>
+            <button name="save_and_continue" class="Magenest\Blog\Block\Adminhtml\Blog\Edit\Button\SaveAndContinueButton"/>
+            <button name="save" class="Magenest\Blog\Block\Adminhtml\Blog\Edit\Button\SaveBlog"/>
+        </buttons>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>magenest_blog_blog_form.magenest_blog_blog_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="magenest_blog_blog_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="magenest_blog/blog/save"/>
+        </settings>
+        <dataProvider class="Magenest\Blog\Model\DataProvider" name="magenest_blog_blog_form_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+<!--        <argument name="dataProvider" xsi:type="configurableObject">-->
+<!--            <argument name="class" xsi:type="string">Magenest\Blog\Model\DataProviderr</argument>-->
+<!--            <argument name="name" xsi:type="string">magenest_blog_blog_form_data_source</argument>-->
+<!--            <argument name="primaryFieldName" xsi:type="string">id</argument>-->
+<!--            <argument name="requestFieldName" xsi:type="string">id</argument>-->
+<!--        </argument>-->
+    </dataSource>
+    <fieldset name="blog-details">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="collapsible" xsi:type="boolean">false</item>
+                <item name="label" xsi:type="string" translate="true">Blog Details</item>
+                <item name="sortOrder" xsi:type="number">20</item>
+            </item>
+        </argument>
+        <field name="title">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Blog Title</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">magenest_blog</item>
+                    <item name="dataScope" xsi:type="string">title</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="description">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Blog Description</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">magenest_blog</item>
+                    <item name="dataScope" xsi:type="string">description</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="content">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Blog Content</item>
+                    <item name="formElement" xsi:type="string">textarea</item>
+                    <item name="source" xsi:type="string">magenest_blog</item>
+                    <item name="dataScope" xsi:type="string">content</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="url_rewrite">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">URL Rewrite</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">magenest_blog</item>
+                    <item name="dataScope" xsi:type="string">url_rewrite</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="status" formElement="select">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Status</label>
+                <dataScope>status</dataScope>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Magenest\Blog\Model\Blog\Source\Status"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

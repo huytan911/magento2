@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/magenest-blog/blog">
+        <service class="Magenest\Blog\Api\BlogRepositoryInterface" method="getAllBlog"/>
+        <resources>
+            <resource ref="Magenest_Blog::blog"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/magenest-blog/blog/:id">
+		<service class="Magenest\Blog\Api\BlogRepositoryInterface" method="getBlogById"/>
+		<resources>
+			<resource ref="Magenest_Blog::blog"/>
+		</resources>
+	</route>
+    <route method="DELETE" url="/V1/magenest-blog/blog/delete/:id">
+        <service class="Magenest\Blog\Api\BlogRepositoryInterface" method="deleteBlog"/>
+        <resources>
+            <resource ref="Magenest_Blog::blog"/>
+        </resources>
+    </route>
+    <route method="POST" url="/V1/magenest-blog/blog/create">
+        <service class="Magenest\Blog\Api\BlogRepositoryInterface" method="createBlog"/>
+        <resources>
+            <resource ref="Magenest_Blog::blog"/>
+        </resources>
+    </route>
+    <route method="PUT" url="/V1/magenest-blog/blog/update/:id">
+        <service class="Magenest\Blog\Api\BlogRepositoryInterface" method="updateBlog"/>
+        <resources>
+            <resource ref="Magenest_Blog::blog"/>
+        </resources>
+    </route>
+</routes>

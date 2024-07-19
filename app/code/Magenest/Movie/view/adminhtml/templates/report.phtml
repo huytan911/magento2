@@ -1,0 +1,22 @@
+<?php
+/**
+ * @var \Magenest\Movie\Block\Adminhtml\Report $block
+ */
+
+?>
+<div>
+    <div class="col-xs-6">
+        <strong>Total request today</strong>
+        <p><span><?=$block->getExternalModuleCount()?></span> request has been made today</p>
+    </div>
+    <div class="col-xs-6">
+        <strong>Detail</strong>
+        <div>
+            <p>Contact Request: <span><?=$block->getNumberOfCustomer()?></span></p>
+            <p>Item Request: <span><?=$block->getNumberOfProduct()?></span></p>
+            <p>Order Request: <span><?=$block->getNumberOfOrder()?></span></p>
+            <p>Invoice Request: <span><?=$block->getNumberOfInvoice()?></span></p>
+            <p>CreditNote Request: <span><?=$block->getNumberOfCreditmemo()?></span></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<?php
+/**
+ * @var \Magenest\Blog\Block\Blog\Index $block
+ */
+
+echo '<pre>';
+print_r($block->getData('data'));
+echo '</pre>';
+
+?>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 30px;}
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+</style>
+<div class="43434334">
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Author</th>
+            <th>Content</th>
+            <th>Status</th>
+        </tr>
+        <?php
+        foreach ($block->getBlogData() as $blog){
+            if($blog['status'] == 1) $blog['status'] = 'Disabled';
+            else $blog['status'] = 'Enabled';
+            echo '<tr>
+                    <td>'.$blog['title'].'</td>
+                    <td>'.$blog['description'].'</td>
+                    <td>'.$blog['author_name'].'</td>
+                    <td>'.$blog['content'].'</td>
+                    <td>'.$blog['status'].'</td>' .
+                '</tr>';
+        }
+        ?>
+    </table>
+</div>
+

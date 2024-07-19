@@ -1,0 +1,55 @@
+<?php
+/**
+ * @var \Magenest\Movie\Block\Display $block
+ */
+echo $block->getData('hello1');
+
+echo "<pre>";
+print_r($block->getData('hello2'));
+echo "</pre>";
+
+echo $block->getData('hello3');
+
+echo "<br>";
+echo "<pre>";
+print_r($block->getTest());
+echo "</pre>";
+?>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 30px;}
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+</style>
+
+<table>
+    <tr>
+        <th>Movie</th>
+        <th>Description</th>
+        <th>Rating</th>
+        <th>Director</th>
+        <th>Actor</th>
+    </tr>
+    <?php
+    foreach ($block->getMovieCollection() as $key=>$movie){
+        echo '<tr>
+                    <td>'.$movie->getMovie().'</td>
+                    <td>'.$movie->getDescription().'</td>
+                    <td>'.$movie->getRating().'</td>
+                    <td>'.$movie->getDirector().'</td>
+                    <td>'.$movie->getActor().'</td>' .
+            '</tr>';
+    }
+    ?>
+</table>

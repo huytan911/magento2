@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_save_before">
+        <observer name="name_event_7" instance="Magenest\Blog\Observer\ChangeFirstNameCustomer"/>
+        <observer name="a" instance="Magenest\Blog\Observer\ChangeFirstNameCustomer2"/>
+    </event>
+</config>

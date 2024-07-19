@@ -1,0 +1,111 @@
+"Save and Continue Edit","Lưu và tiếp tục sửa"
+"Save Actor","Lưu Diễn Viên"
+"Actor Information","Thông tin diễn viên"
+"Actor Name","Tên Diễn Viên"
+"Actor information","Thông tin diễn viên"
+Color,Màu
+"Color Code","Mã Màu"
+Add,Thêm
+"Save Movie","Lưu Phim"
+"Movie Information","Thông tin phim"
+Name,Tên
+Rating,Đánh giá
+Description,Mô tả
+Director,Đạo diễn
+"Movie Name","Tên Phim"
+"Movie Description","Mô tả phim"
+"Movie Rating","Đánh giá phim"
+"Movie information","Thông tin phim"
+"Account Dashboard","Thông tin tải khoản"
+Actors,Diễn viên
+Directors,Đạo diễn
+"A total of %1 record(s) have been deleted.","Tổng có %1 bản ghi đã được xóa."
+"Delete error: %1","Xóa không thành công: %1"
+Movies,Phim
+"Request Report","Yêu cầu báo cáo"
+"Save Error","Lưu không thành công"
+"Update Success","Update Success"
+"Save Success","Save Success"
+"The profile picture is not a valid image.","The profile picture is not a valid image."
+Edit,Edit
+"Avatar: ","Avatar: "
+"Customer Avatar","Customer Avatar"
+"Name: ","Name: "
+"Email: ","Email: "
+"Phone: ","Phone: "
+"* Required Fields","* Required Fields"
+"Account Information","Account Information"
+Avatar,Avatar
+"Upload new avatar","Upload new avatar"
+"Change Email","Change Email"
+"Change Password","Change Password"
+"Change Email and Password","Change Email and Password"
+Email,Email
+"Current Password","Current Password"
+"New Password","New Password"
+"Password Strength","Password Strength"
+"No Password","No Password"
+"Confirm New Password","Confirm New Password"
+Save,Save
+"Go back","Go back"
+"Personal Information","Personal Information"
+"Sign Up for Newsletter","Sign Up for Newsletter"
+"Address Information","Address Information"
+Address,Address
+"Street Address %1","Street Address %1"
+"Please select a region, state or province.","Please select a region, state or province."
+"Sign-in Information","Sign-in Information"
+Password,Password
+"Confirm Password","Confirm Password"
+"Phone number","Phone number"
+"Create an Account","Create an Account"
+Back,Back
+"Password: ","Password: "
+Upload,Upload
+"Select from Gallery","Select from Gallery"
+"Maximum file size","Maximum file size"
+"Allowed file types","Allowed file types"
+"Browse to find or drag image here","Browse to find or drag image here"
+"Login Modal","Login Modal"
+Close,Close
+"Please enter exactly abcdef words","Please enter exactly abcdef words"
+Magenest,Magenest
+Movie,Movie
+"General Configuration","General Configuration"
+Test,Test
+"Text Field","Text Field"
+"Yes/No_Field_<span style=""color: red;"">abcd</span>","Yes/No_Field_<span style=""color: red;"">abcd</span>"
+"Custom Select Field","Custom Select Field"
+"Rows in table “magenest_movie”","Rows in table “magenest_movie”"
+"Rows in table “magenest_actor”","Rows in table “magenest_actor”"
+Button,Button
+"Theme Color","Theme Color"
+Block,Block
+"Select Block...","Select Block..."
+Template,Template
+"CMS Static Block Default Template","CMS Static Block Default Template"
+"Customer Group","Customer Group"
+"Add New Actor","Add New Actor"
+Delete,Delete
+"Delete Post","Delete Post"
+"Are you sure you wan't to delete selected items?","Are you sure you wan't to delete selected items?"
+ID,ID
+Created,Created
+Modified,Modified
+"Add New Director","Add New Director"
+"Movie Details","Movie Details"
+"Add New Movie","Add New Movie"
+"Delete Movies","Delete Movies"
+"Are you sure you wan't to delete
+                                selected items?
+                            ","Are you sure you wan't to delete
+                                selected items?
+                            "
+Collapsible,Collapsible
+From,From
+To,To
+"Add Record","Add Record"
+"Slide Document","Slide Document"
+"Export Orders","Export Orders"
+Odd/Even,Odd/Even
+"My Dashboard","My Dashboard"

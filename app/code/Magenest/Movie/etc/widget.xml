@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+    <widget class="Magenest\Movie\Block\Widget\Posts" id="magenest_movie_posts">
+        <label>Blog Posts</label>
+        <description>Posts</description>
+        <parameters>
+            <parameter name="block_id" xsi:type="block" visible="true" required="true" sort_order="20">
+                <label translate="true">Block</label>
+                <block class="Magento\Cms\Block\Adminhtml\Block\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Block...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="template" xsi:type="select" visible="true" required="true" sort_order="10">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="Magento_Cms::widget/static_block/default.phtml" selected="true">
+                        <label translate="true">CMS Static Block Default Template</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="posts" sort_order="10" visible="true" xsi:type="text">
+                <label>Custom Posts Label</label>
+            </parameter>
+            <parameter name="customer_group" sort_order="20" visible="true" xsi:type="multiselect"
+                source_model="Magento\Customer\Model\ResourceModel\Group\Collection">
+                <label translate="true">Customer Group</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magenest_Movie::css/modal-custom.css"/>
+    </head>
+    <referenceContainer name="content">
+        <container name="test1" htmlTag="div" htmlClass="hello1">
+            <block class="Magenest\Movie\Block\Index" name="movie_index_index" template="Magenest_Movie::index.phtml" />
+        </container>
+        <container name="test1" htmlTag="div" htmlClass="hello2" output="1">
+            <block class="Magenest\Movie\Block\Index" name="movie_index_index_1" template="Magenest_Movie::index.phtml" />
+            <block class="Magenest\Movie\Block\Index" name="movie_index_index_2" template="Magenest_Movie::index.phtml" />
+        </container>
+    </referenceContainer>
+</page>

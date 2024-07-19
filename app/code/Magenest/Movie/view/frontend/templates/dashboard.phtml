@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @var \Magenest\Movie\Block\Account\Dashboard $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+$customerInformation = $block->getCustomerInformation();
+echo "<pre>";
+print_r($block->getSessionName());
+echo "</pre>";
+?>
+<style>
+    .avatar {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+    form {
+        margin-bottom: 40px;
+    }
+    .block-title {
+        border-bottom: 1px solid #c6c6c6;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+    }
+    .block-title > strong {
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: #333333;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-style: normal;
+        line-height: 1.42857143;
+    }
+</style>
+<div class="block-title"><strong><?= $block->escapeHtml(__('Account Dashboard')) ?></strong></div>
+<form>
+    <div class="avatar">
+        <label style="margin-right: 20px"><?=$escaper->escapeHtml(__('Avatar: '))?></label>
+        <img src="<?= $block->getCustomerAvatar() ?>" alt="<?=__('Customer Avatar')?>" style="width: 100px; height: 100px">
+    </div>
+    <div>
+        <label><?=$escaper->escapeHtml(__('Name: '))?></label>
+        <span><?=$escaper->escapeHtml($customerInformation->getName())?></span>
+    </div>
+    <div>
+        <label><?=$escaper->escapeHtml(__('Email: '))?></label>
+        <span><?=$escaper->escapeHtml($customerInformation->getEmail())?></span>
+    </div>
+    <div>
+        <label><?=$escaper->escapeHtml(__('Phone: '))?></label>
+        <span><?=$escaper->escapeHtml($customerInformation->getPhoneNumber())?></span>
+    </div>
+</form>

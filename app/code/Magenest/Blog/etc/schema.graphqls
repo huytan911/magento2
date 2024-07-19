@@ -1,0 +1,23 @@
+type Query {
+    customer: [customer] @resolver(class:"Magenest\\Blog\\Model\\Resolver\\Customer")
+}
+type customer {
+    entity_id: Int
+    firstname: String
+    lastname: String
+    email: String
+    created_at: String
+    updated_at: String
+}
+
+
+type Mutation {
+    editCustomerName (customerId: Int!,
+        firstName: String!,
+        lastName: String!
+    ):EditCustomerName @resolver(class: "Magenest\\Blog\\Model\\Resolver\\EditCustomerName")
+}
+type EditCustomerName {
+    firstName: String
+    lastName: String
+}
